@@ -76,7 +76,7 @@ collection = client.get_collection(name=collection_name)
 response = rag_provider(prompt, context, collection)
 print(f"Résultats pour la collection {collection_name} :")
 print(response)
-
+```
 
 
 
@@ -184,12 +184,12 @@ context = {}
 response = rag_provider(prompt, context, collection)
 print(f"Résultats pour la collection {collection_name} :")
 print(response)
+```
 
 #Différences entre les Modèles d'Embedding
 GPT-3.5 (text-embedding-ada-002) :
         Génère des embeddings de haute qualité directement via l'API OpenAI.
         Utilisation intégrée pour une compatibilité fluide avec le modèle de langage GPT-3.5.
-
-    Sentence Transformers (all-MiniLM-L6-v2) :
+Sentence Transformers (all-MiniLM-L6-v2) :
         Fournit des embeddings efficaces et performants.
         Approprié pour une utilisation avec Mistral et d'autres tâches de récupération.
