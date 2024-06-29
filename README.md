@@ -10,6 +10,18 @@ Bienvenue dans le projet de Génération-Augmentée par Récupération (RAG) ! C
 - **Comparaison des Modèles** : Évaluer les performances de divers modèles d'embedding et stratégies de récupération.
 - **Applications Variées** : Tester l'efficacité de RAG dans différents cas d'utilisation.
 
+
+## Fonctionnement de la Génération-Augmentée par Récupération (RAG)
+
+La Génération-Augmentée par Récupération (RAG) combine la puissance de la génération de texte par l'IA avec la capacité de récupérer des informations pertinentes à partir d'une base de documents. Voici comment cela fonctionne :
+
+1. **Requête Utilisateur** : Un utilisateur pose une question ou donne une instruction.
+2. **Embedding de la Requête** : La requête est transformée en un vecteur numérique (embedding) qui capture le sens de la phrase.
+3. **Récupération de Documents** : Ce vecteur est utilisé pour rechercher les documents les plus pertinents dans une base de données, grâce à des techniques de similarité sémantique.
+4. **Combinaison de Contexte** : Les textes des documents récupérés sont combinés avec la requête initiale pour créer un contexte enrichi.
+5. **Génération de Réponse** : Ce contexte est fourni à un modèle de génération de texte (comme Mistral ou GPT-3.5) pour produire une réponse plus complète et informée.
+
+
 ## Utilisation sur Google Colab
 
 Pour faciliter l'utilisation de ce projet, nous avons préparé des notebooks Google Colab où vous pouvez exécuter les scripts sans avoir à cloner le dépôt localement. Suivez simplement les instructions dans les notebooks pour configurer et exécuter les différents modèles.
