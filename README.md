@@ -98,7 +98,7 @@ import chromadb
 from chromadb.config import Settings
 
 # Endpoint pour les complétions textuelles
-MISTRAL_COMPLETION_URL = "https://mixtral-8x22b-instruct-v01.endpoints.kepler.ai.cloud.ovh.net/api/openai_compat/v1/completions"
+MISTRAL_COMPLETION_URL = "YOUR MISTRAL URL"
 
 # Initialisation du modèle Sentence Transformer
 model = SentenceTransformer('all-MiniLM-L6-v2')
@@ -186,10 +186,12 @@ print(f"Résultats pour la collection {collection_name} :")
 print(response)
 ```
 
-#Différences entre les Modèles d'Embedding
-GPT-3.5 (text-embedding-ada-002) :
-        Génère des embeddings de haute qualité directement via l'API OpenAI.
-        Utilisation intégrée pour une compatibilité fluide avec le modèle de langage GPT-3.5.
-Sentence Transformers (all-MiniLM-L6-v2) :
-        Fournit des embeddings efficaces et performants.
-        Approprié pour une utilisation avec Mistral et d'autres tâches de récupération.
+## Différences entre les Modèles d'Embedding
+
+## GPT-3.5 (text-embedding-ada-002) :
+Génère des embeddings de haute qualité directement via l'API OpenAI.
+Utilisation intégrée pour une compatibilité fluide avec le modèle de langage GPT-3.5.
+
+## Sentence Transformers (all-MiniLM-L6-v2) :
+Fournit des embeddings efficaces et performants.
+Approprié pour une utilisation avec Mistral et d'autres tâches de récupération.
