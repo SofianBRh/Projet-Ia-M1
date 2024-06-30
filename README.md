@@ -4,6 +4,14 @@
 
 Bienvenue dans le projet de Génération-Augmentée par Récupération (RAG) ! Ce projet a pour objectif d'améliorer les capacités des modèles de langage en les intégrant avec un mécanisme de récupération pour accéder à des documents externes pertinents. En combinant des modèles de langage de pointe comme GPT-3.5 et Mistral avec des systèmes de récupération de documents efficaces, nous visons à produire des réponses plus précises, riches en contexte et pertinentes.
 
+## Schéma LLM:
+
+![llm](https://github.com/SofianBRh/Projet-Ia-M1/assets/95184450/142c2b0b-31fc-44f2-aed5-9a37345dcd05)
+
+
+
+
+
 ## Objectifs du Projet
 
 - **Amélioration des Réponses** : Utilisation de documents externes pour fournir des réponses plus contextuelles.
