@@ -29,6 +29,109 @@ La Génération-Augmentée par Récupération (RAG) combine la puissance de la g
 4. **Combinaison de Contexte** : Les textes des documents récupérés sont combinés avec la requête initiale pour créer un contexte enrichi.
 5. **Génération de Réponse** : Ce contexte est fourni à un modèle de génération de texte (comme Mistral ou GPT-3.5) pour produire une réponse plus complète et informée.
 
+## Schéma d'un rag:
+
+![schema-rag-basique](https://github.com/SofianBRh/Projet-Ia-M1/assets/95184450/ee27248c-3ad0-4276-bee4-07ab0f878b32)
+
+
+
+ ## Schéma de notre outils:
+                         +---------------------+
+                        |                     |
+                        |     Utilisateur     |
+                        |                     |
+                        +----------+----------+
+                                   |
+                                   v
+                        +---------------------+
+                        |                     |
+                        |      Interface      |
+                        |   (Google Colab)    |
+                        |                     |
+                        +----------+----------+
+                                   |
+                                   v
+                        +---------------------+
+                        |                     |
+                        |    Gestionnaire     |
+                        |     de Requêtes     |
+                        |        (RAG)        |
+                        |                     |
+                        +----------+----------+
+                                   |
+                                   v
+                  +----------------+-----------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Transformation en         |     | Transformation en         |
+    | Embedding (OpenAI GPT)    |     | Embedding (Sentence       |
+    |                           |     | Transformers)             |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Interrogation de ChromaDB |     | Interrogation de ChromaDB |
+    | avec l'Embedding          |     | avec l'Embedding          |
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Récupération de           |     | Récupération de           |
+    | Documents Pertinents      |     | Documents Pertinents      |
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Formation d'un Prompt     |     | Formation d'un Prompt     |
+    | Combiné avec les Documents|     | Combiné avec les Documents|
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Interrogation du Modèle   |     | Interrogation du Modèle   |
+    | de Langage (GPT)          |     | de Langage (Mistral)      |
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Réponse Générée par le    |     | Réponse Générée par le    |
+    | Modèle GPT                |     | Modèle Mistral            |
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                  |                                  |
+                  v                                  v
+    +---------------------------+     +---------------------------+
+    |                           |     |                           |
+    | Envoi de la Réponse       |     | Envoi de la Réponse       |
+    | à l'Utilisateur           |     | à l'Utilisateur           |
+    |                           |     |                           |
+    +---------------------------+     +---------------------------+
+                                    |   
+                                    |
+                                    v
+
+                        +---------------------+
+                        |                     |
+                        |     Analyse de      |
+                        |   de la pertinence  |
+                        |        des          |
+                        |       reponse       |
+                        +----------+----------+
+                                 
+                                   
+
+
 
 ## Utilisation sur Google Colab
 
